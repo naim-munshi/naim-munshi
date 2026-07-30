@@ -4,8 +4,8 @@
 
 ---
 
-## 🧠 About Me
-- 🤖 Building an **AI-based Operating System
+##  About Me
+- Building an **AI-based Operating System
 - 🌱 Currently learning:
   - Python
   - Machine Learning
