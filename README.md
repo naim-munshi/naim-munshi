@@ -1,33 +1,45 @@
 # Md Naim
 
-**AI engineering student | LLM systems, inference serving and applied computer vision**
+**AI / Machine Learning Engineer — Generative AI Applications, Full-Stack AI Systems & Model Serving**
 
 Faculty of Engineering · Information Technology · Tokyo Polytechnic University, Japan
 
-I build and test software around language models and machine learning: backend services, retrieval systems, inference APIs and reproducible evaluation. My projects prioritize measurable behavior, clear limitations and engineering documentation.
+I develop and evaluate AI-enabled applications across **Python/FastAPI backends, React/TypeScript frontends, retrieval and LLM workflows, and native inference systems**. My repositories focus on implementation, automated tests, reproducible measurements and explicit limitations rather than unsupported production claims.
 
-## Selected engineering projects
+## Featured engineering projects
 
-### [CortexLite — Native C/C++ AI Inference & Vector Search](https://github.com/naim-munshi/cortexlite-ai-engine)
+These repositories are ordered by relevance to **full-stack AI application engineering and LLM-enabled services**. Each links to inspectable source code and its actual validation evidence.
 
-**Completed educational v1.0.** Built an inspectable CPU-only pipeline combining **C11 neural-network inference** with **C++17 custom hash tables, top-K heaps and exact/graph similarity search**. Includes PyTorch training/export, FP32 and weight-only INT8 execution, SSE2/ARM NEON kernels, and reproducible macOS/Linux CI tests. On an actual macOS ARM64 benchmark, four-thread execution measured **1.69× wall throughput** over scalar single-thread execution on a small synthetic workload; the [35-run raw evidence and limitations](https://github.com/naim-munshi/cortexlite-ai-engine/blob/main/docs/results-macos.md) are public.
+### 1. [Aqlyra — Full-Stack AI & Retrieval-Augmented Generation](https://github.com/naim-munshi/aqlyra-rag-ai)
 
-**Technologies:** C11 · C++17 · Python · PyTorch · CMake/Clang · GitHub Actions
+**Closest match to full-stack Generative AI engineering.** Developed a pre-production AI knowledge application with **Next.js / React / TypeScript**, **Python / FastAPI**, **PostgreSQL + pgvector**, hybrid dense/lexical retrieval, citation validation, grounding checks, document ingestion and streaming conversations. Includes user-scoped access control, Docker-based deployment configurations, automated tests and pre-deployment CI; public HTTPS launch and provider-backed end-to-end acceptance are not yet confirmed.
 
-### [Metriqen — LLM Serving & Benchmarking](https://github.com/naim-munshi/metriqen-llm-serving-optimization)
+**Stack:** Python · FastAPI · TypeScript · Next.js · React · PostgreSQL · pgvector · Docker  
+**Review:** [Architecture and limitations](https://github.com/naim-munshi/aqlyra-rag-ai#how-the-system-is-structured) · [CI workflows](https://github.com/naim-munshi/aqlyra-rag-ai/actions)
 
-Local open-weight LLM inference prototype with a Go streaming gateway, bounded FIFO request admission, Python performance benchmarks and evidence-based evaluation. Includes a [developer-operated local case study](https://github.com/naim-munshi/metriqen-llm-serving-optimization/blob/main/docs/benchmarks/experiments/2026-10-13-ollama-parallelism.md), with results explicitly labeled descriptive rather than causal.
+### 2. [Metriqen — LLM Serving & Performance Engineering](https://github.com/naim-munshi/metriqen-llm-serving-optimization)
 
-**Technologies:** Go · Python · Ollama · FastAPI · GitHub Actions
+**LLM infrastructure and operational reliability.** Built a local open-weight LLM inference prototype using a **Go streaming/API gateway**, Ollama, bounded request admission, a **Python/FastAPI** control plane and reproducible load/quality evaluation. Benchmarks include throughput, time-to-first-token and latency measurements, with workload and host limitations documented. The portfolio release and production deployment are **not** claimed complete.
 
-### [Aqlyra RAG AI](https://github.com/naim-munshi/aqlyra-rag-ai)
+**Stack:** Go · Python · FastAPI · Ollama · PostgreSQL · Docker · GitHub Actions  
+**Review:** [Engineering case study](https://github.com/naim-munshi/metriqen-llm-serving-optimization/blob/main/docs/PORTFOLIO_CASE_STUDY.md) · [CI](https://github.com/naim-munshi/metriqen-llm-serving-optimization/actions)
 
-RAG-oriented system for hybrid retrieval, grounding, citation validation and retrieval evaluation.
+### 3. [IhsanVision.AI — Industrial Visual Anomaly Detection](https://github.com/naim-munshi/ihsanvision-ai-industrial-anomaly-detection)
 
-**Technologies:** Python · FastAPI · PostgreSQL · pgvector · Docker
+**Applied machine learning and model evaluation.** Implemented **PyTorch / Anomalib** anomaly-detection experiments using PaDiM and PatchCore, with documented MVTec AD *bottle* results, local checkpoint-backed inference, FastAPI interfaces, automated tests and model-serving measurements. Additional category evaluation and final release acceptance remain in progress.
 
-## Engineering interests
+**Stack:** Python · PyTorch · Anomalib · FastAPI · Docker · GitHub Actions  
+**Review:** [Observed model evaluation](https://github.com/naim-munshi/ihsanvision-ai-industrial-anomaly-detection#measured-model-performance--mvtec-ad-bottle) · [Evaluation protocol](https://github.com/naim-munshi/ihsanvision-ai-industrial-anomaly-detection/blob/main/docs/evaluation.md)
 
-LLM inference infrastructure · RAG and retrieval quality · AI evaluation · backend systems · reproducible machine learning experiments
+### 4. [CortexLite — C/C++ Neural Inference & Vector Search](https://github.com/naim-munshi/cortexlite-ai-engine)
 
-Project READMEs distinguish implemented components, limitations, and planned work. CortexLite v1.0 is complete within its educational scope; other systems continue to evolve.
+**Algorithms and low-level AI execution.** Completed an educational **C11/C++17** inference/search engine with PyTorch weight export, custom hash maps and top-K heaps, exact/graph cosine retrieval, SIMD and weight-only INT8. The 35-run macOS ARM64 toy workload measured **1.69× four-thread vs one-thread wall throughput**, **37.3% lower model parameter storage** and **95.2% Recall@10** for seeded synthetic vector retrieval (ef=64). These are **not** large-model or production service benchmarks.
+
+**Stack:** C11 · C++17 · Python · PyTorch · CMake / Apple Clang · GitHub Actions  
+**Review:** [macOS benchmark and limitations](https://github.com/naim-munshi/cortexlite-ai-engine/blob/main/docs/results-macos.md) · [Native build instructions](https://github.com/naim-munshi/cortexlite-ai-engine#run-it-yourself)
+
+## Core engineering interests
+
+Generative AI and LLM applications · Retrieval quality and grounded answers · REST APIs and microservices · Model evaluation · Observability and performance · Computer vision · Data structures and algorithms
+
+*Status matters: Aqlyra is pre-production; Metriqen and IhsanVision remain engineering prototypes; CortexLite v1.0 is complete within its deliberately small educational scope. Repository documentation identifies what has been tested and what is still planned.*
