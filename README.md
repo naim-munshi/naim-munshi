@@ -6,6 +6,8 @@ Faculty of Engineering · Information Technology · Tokyo Polytechnic University
 
 I build and evaluate AI-enabled software across **Python/FastAPI backends, React/TypeScript applications, retrieval and LLM workflows, multimodal machine learning, and native inference systems**. My portfolio focuses on inspectable implementations, automated tests, reproducible experiments, and honest reporting of engineering trade-offs.
 
+**🚀 Live application:** [https://aqlyra-ai.vercel.app](https://aqlyra-ai.vercel.app)
+
 ## Featured engineering projects
 
 These projects are selected for their technical depth and relevance to AI application, ML systems, and infrastructure engineering.
