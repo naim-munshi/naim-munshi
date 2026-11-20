@@ -4,18 +4,25 @@
 
 Faculty of Engineering · Information Technology · Tokyo Polytechnic University, Japan
 
-I develop and evaluate AI-enabled applications across **Python/FastAPI backends, React/TypeScript frontends, retrieval and LLM workflows, and native inference systems**. My repositories focus on implementation, automated tests, reproducible measurements and explicit limitations rather than unsupported production claims.
+I develop and evaluate AI-enabled applications across **Python/FastAPI backends, React/TypeScript frontends, retrieval and LLM workflows, and native inference systems**. My repositories emphasize implementation, automated tests, reproducible measurements and clearly stated engineering limitations.
 
 ## Featured engineering projects
 
-These repositories are ordered by relevance to **full-stack AI application engineering and LLM-enabled services**. Each links to inspectable source code and its actual validation evidence.
+These repositories are ordered by relevance to **full-stack AI application engineering and LLM-enabled services**. Each links to inspectable source code and validation evidence.
 
-### 1. [Aqlyra — Full-Stack AI & Retrieval-Augmented Generation](https://github.com/naim-munshi/aqlyra-rag-ai)
+### 1. [Aqlyra — Full-Stack AI Knowledge & RAG Application](https://github.com/naim-munshi/aqlyra-rag-ai)
 
-**Closest match to full-stack Generative AI engineering.** Developed a pre-production AI knowledge application with **Next.js / React / TypeScript**, **Python / FastAPI**, **PostgreSQL + pgvector**, hybrid dense/lexical retrieval, citation validation, grounding checks, document ingestion and streaming conversations. Includes user-scoped access control, Docker-based deployment configurations, automated tests and pre-deployment CI; public HTTPS launch and provider-backed end-to-end acceptance are not yet confirmed.
+**Public engineering beta; not enterprise-production certified.** Built a full-stack AI knowledge application with a separately deployed **Next.js / React / TypeScript frontend** and **Python / FastAPI backend**, **Neon PostgreSQL + pgvector**, Redis and an isolated 384-dimensional multilingual semantic worker. The application includes private document ingestion, dense and lexical retrieval, Reciprocal Rank Fusion (RRF), evidence-grounded answers, citation validation, streaming conversations, memory and web research.
 
-**Stack:** Python · FastAPI · TypeScript · Next.js · React · PostgreSQL · pgvector · Docker  
-**Review:** [Architecture and limitations](https://github.com/naim-munshi/aqlyra-rag-ai#how-the-system-is-structured) · [CI workflows](https://github.com/naim-munshi/aqlyra-rag-ai/actions)
+**Measured engineering evidence (10 November 2026):** 1,035 / 1,035 eligible ready chunks had current 384D semantic vectors indexed. The deployed compact multilingual encoder's offline Hit Rate@1 on 60 synthetic queries was **70% English / 35% Japanese / 60% Bengali**. These are index-coverage and offline retrieval measurements—not live answer accuracy, customer quality or an availability SLA. Japanese retrieval remains an improvement area.
+
+**Outstanding release gates:** real authenticated multi-user end-to-end acceptance, multilingual voice acceptance, representative independent answer-quality evaluation, and verified encrypted off-host database/object recovery. The public `/demo` route is a clearly labelled scripted preview; it does not perform live inference.
+
+**Stack:** Python · FastAPI · TypeScript · Next.js · React · PostgreSQL · pgvector · Redis · Docker · ONNX
+
+**Explore:** [Live application](https://aqlyra-ai.vercel.app) · [Scripted demo](https://aqlyra-ai.vercel.app/demo) · [Active backend release README](https://github.com/naim-munshi/aqlyra-rag-ai/blob/release/core-without-study-abroad-20261027/README.md) · [Phase 1 evaluation and acceptance report](https://github.com/naim-munshi/aqlyra-rag-ai/blob/release/core-without-study-abroad-20261027/docs/PORTFOLIO_PHASE1_AUDIT_20261110.md) · [GitHub Actions](https://github.com/naim-munshi/aqlyra-rag-ai/actions)
+
+*Repository note: Aqlyra's protected `main` branch is a historical baseline, not the deployed backend release. The current backend source and its status evidence are linked above.*
 
 ### 2. [Metriqen — LLM Serving & Performance Engineering](https://github.com/naim-munshi/metriqen-llm-serving-optimization)
 
@@ -42,4 +49,4 @@ These repositories are ordered by relevance to **full-stack AI application engin
 
 Generative AI and LLM applications · Retrieval quality and grounded answers · REST APIs and microservices · Model evaluation · Observability and performance · Computer vision · Data structures and algorithms
 
-*Status matters: Aqlyra is pre-production; Metriqen and IhsanVision remain engineering prototypes; CortexLite v1.0 is complete within its deliberately small educational scope. Repository documentation identifies what has been tested and what is still planned.*
+*Project status: Aqlyra is a public engineering beta, not enterprise-production certified; Metriqen and IhsanVision remain engineering prototypes; CortexLite v1.0 is complete within its deliberately small educational scope. Each repository documents what has been tested and what remains open.*
